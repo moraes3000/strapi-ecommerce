@@ -1,1 +1,731 @@
-{"_type":"export","__export_format":4,"__export_date":"2023-04-21T21:30:05.094Z","__export_source":"insomnia.desktop.app:v2023.1.0","resources":[{"_id":"req_9a91b63d08364f538574d937bdba8fbd","parentId":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","modified":1682111468528,"created":1682111149849,"url":"{{ _.URLBASE }}/api/addresses","name":"CreateAddress","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"data\":{\n\t\t\"title\":\"titleaaaaaaaaaaa\",\n\t\t\"name\":\"name\",\n\t\t\"address\":\"rua\",\n\t\t\"city\":\"Maua\",\n\t\t\"state\":\"maua\",\n\t\t\"postal_code\":\"1234\",\n\t\t\"user\":2\n\t}\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}"},"metaSortKey":-1682111154818.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682112406828,"created":1682111159788,"name":"Address","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1682111159788,"_type":"request_group"},{"_id":"wrk_0f780c40742540019222ee8dd19e4931","parentId":null,"modified":1682109578595,"created":1682109578595,"name":"strapi eccomerce","description":"","scope":"collection","_type":"workspace"},{"_id":"req_2ad0ca2cdf684793861e1e5281bf138f","parentId":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","modified":1682112389777,"created":1682111612975,"url":"{{ _.URLBASE }}/api/addresses?filters[user]=2","name":"GetMyAddress","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}","disabled":false},"metaSortKey":-1682111154815.375,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_36a8e5938ac04bf19642d4e5f6640807","parentId":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","modified":1682112390992,"created":1682111936536,"url":"{{ _.URLBASE }}/api/addresses?populate=*","name":"GetAddress__Populate","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}","disabled":false},"metaSortKey":-1682111154813.8125,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b1a20ebd03c648d882d7b0c1d0f02e07","parentId":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","modified":1682112425301,"created":1682112256731,"url":"{{ _.URLBASE }}/api/addresses/1","name":"UpdateAddress","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"data\":{\n\t\"title\":\"BATATA\",\n\t\"name\": \"bruno moraes\",\n\t\"address\": \"sem \",\n\t\"city\": \"cidade\",\n\t\"state\": \"estado\",\n\t\"postal_code\": \"0999119\",\n\t\"phone\": \"000\"\t\t\n\t}\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}"},"metaSortKey":-1682111154813.0312,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_fc4bcc286f8f40299b22623c1b3b8bf0","parentId":"fld_a5a212b9e5a84eaabcc8651c8caef5a6","modified":1682112384887,"created":1682112107118,"url":"{{ _.URLBASE }}/api/addresses/2","name":"DeleteAddress","description":"","method":"DELETE","body":{},"parameters":[],"headers":[],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}"},"metaSortKey":-1682111154812.25,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_79940b22416849dc872bd1a45dcbabbd","parentId":"fld_b4a2467ae5354bcd91253ecca16317db","modified":1682110103773,"created":1682109923817,"url":"{{ _.URLBASE }}/api/auth/local/register","name":"Register","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"email\":\"email22222@email.com\",\n\t\"username\":\"username22222\",\n\t\"password\":\"123456\"\t\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{},"metaSortKey":-1682109923817,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_b4a2467ae5354bcd91253ecca16317db","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682109952661,"created":1682109952661,"name":"Auth","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1682109952661,"_type":"request_group"},{"_id":"req_e63a7f63e5254d82b22e56e1df43643e","parentId":"fld_b4a2467ae5354bcd91253ecca16317db","modified":1682111407777,"created":1682110200136,"url":"{{ _.URLBASE }}/api/auth/local","name":"Login","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"identifier\":\"username\",\n\t\"password\":\"123456\"\t\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{},"metaSortKey":-1682109761247,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_06a5e0ab015a468f95be51b4732d695e","parentId":"fld_1fc0f9ca969543cb9dc0b30a714dc548","modified":1682110696651,"created":1682110574540,"url":"{{ _.URLBASE }}/api/users/2","name":"updateUser","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"firstname\": \"Bruno\",\n\t\"lastname\": \"Moraes\"\n}"},"parameters":[],"headers":[{"id":"pair_15bbaa7c53c74ff588bdad45f822471d","name":"","value":"","description":""},{"name":"Content-Type","value":"application/json"}],"authentication":{"type":"bearer","token":"{{ _.TOKEN_JWT }}"},"metaSortKey":-1682110574540,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_1fc0f9ca969543cb9dc0b30a714dc548","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682110466056,"created":1682109814070,"name":"User","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1682109814070,"_type":"request_group"},{"_id":"req_6a2119e5a908494f8a48155a7cc26252","parentId":"fld_1fc0f9ca969543cb9dc0b30a714dc548","modified":1682110389539,"created":1682109598677,"url":"{{ _.URLBASE }}/api/users/me","name":"getMe","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_75fc5886ec834687a4e1e306903190c7","name":"Authorization","value":"Bearer {{ _.TOKEN_JWT }}","description":""}],"authentication":{"type":"apikey","disabled":false,"key":"","value":"","addTo":"header"},"metaSortKey":-1682109598677,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_bc006cd69a5f4156af7dc6813f686d3b","parentId":"fld_1fc0f9ca969543cb9dc0b30a714dc548","modified":1682110523762,"created":1682110498125,"url":"{{ _.URLBASE }}/api/users","name":"listAllUser","description":"","method":"GET","body":{},"parameters":[],"headers":[{"id":"pair_75fc5886ec834687a4e1e306903190c7","name":"Authorization","value":"Bearer {{ _.TOKEN_JWT }}","description":""}],"authentication":{"type":"apikey","disabled":false,"key":"","value":"","addTo":"header"},"metaSortKey":-1681943760836,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_bde4e4188aaa7163fc6f3cf599001962c64cc97d","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682111751915,"created":1682109578599,"name":"Base Environment","data":{"URLBASE":"http://localhost:1337","TOKEN_JWT":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMTExNzI4LCJleHAiOjE2ODQ3MDM3Mjh9.ZvR1nKUl0G9djek6FG92VkVvX8xzBp0XJLn4YGp8wPE"},"dataPropertyOrder":{"&":["URLBASE","TOKEN_JWT"]},"color":null,"isPrivate":false,"metaSortKey":1682109578599,"_type":"environment"},{"_id":"jar_bde4e4188aaa7163fc6f3cf599001962c64cc97d","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682109578600,"created":1682109578600,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_bdea65e7dc684b48a7f921664fb0a087","parentId":"wrk_0f780c40742540019222ee8dd19e4931","modified":1682109578595,"created":1682109578595,"fileName":"strapi eccomerce","contents":"","contentType":"yaml","_type":"api_spec"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-04-25T00:55:08.450Z",
+  "__export_source": "insomnia.desktop.app:v2023.1.0",
+  "resources": [
+    {
+      "_id": "req_48fd16e715e8457595ba28ee77a65234",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682383097029,
+      "created": 1682382837081,
+      "url": "{{ _.URLBASE }}/api/wishlists",
+      "name": "AddWishlist",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"data\":{\n\t\t\"user\":2,\n\t\t\"game\":3\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382837081,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_914e2845612e4120becac7b32929afad",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682382817325,
+      "created": 1682382817325,
+      "name": "Wishlist",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682382817325,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_0f780c40742540019222ee8dd19e4931",
+      "parentId": null,
+      "modified": 1682109578595,
+      "created": 1682109578595,
+      "name": "strapi eccomerce",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_ffc07125633d42cd838d445656e298dc",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682384053371,
+      "created": 1682383965411,
+      "url": "{{ _.URLBASE }}/api/wishlists?filters[user][id][$eq]=2",
+      "name": "GelAllUser",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382837068.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67b9478b8383432c9ba539abcdb8ac64",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682383900197,
+      "created": 1682383830077,
+      "url": "{{ _.URLBASE }}/api/wishlists/6",
+      "name": "DeleteWishlist",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382837056,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_326359283b8b419599bda688eecfa479",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682384026275,
+      "created": 1682383215054,
+      "url": "{{ _.URLBASE }}/api/wishlists?filters[user][id][$eq]=2",
+      "name": "CheckGameWishlist",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382837031,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6ee0910d261c4f0d87c641f2a03d79da",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682383646943,
+      "created": 1682383638965,
+      "url": "{{ _.URLBASE }}/api/wishlists?populate=*",
+      "name": "CheckGameWishlist populate",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382689818.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d0c5012cb93b4f76ac40546e88ceec78",
+      "parentId": "fld_914e2845612e4120becac7b32929afad",
+      "modified": 1682383784439,
+      "created": 1682383585375,
+      "url": "{{ _.URLBASE }}/api/wishlists?filters[user][id][$eq][0]=2&filters[game][id][$eq][1]=3",
+      "name": "CheckGameWishlist filtro dobrado",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682382542605.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3373389384b54b8895aa8cbbb4b4c7bd",
+      "parentId": "fld_83fe0e4106d44883943621d2e7d4fdc1",
+      "modified": 1682382328444,
+      "created": 1682382248180,
+      "url": "{{ _.URLBASE }}/api/games?populate=*",
+      "name": "GelAllGame",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1682382248180,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_83fe0e4106d44883943621d2e7d4fdc1",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682382246830,
+      "created": 1682382246830,
+      "name": "GAME",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682382246830,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b7b6f71b6dca42008c5b3add5f2731bc",
+      "parentId": "fld_83fe0e4106d44883943621d2e7d4fdc1",
+      "modified": 1682382446835,
+      "created": 1682382409342,
+      "url": "{{ _.URLBASE }}/api/games/3?populate=*",
+      "name": "GelGameById",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1682381724990.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_80c189240ad14333a9b6fd4517bd15f1",
+      "parentId": "fld_83fe0e4106d44883943621d2e7d4fdc1",
+      "modified": 1682382576296,
+      "created": 1682382460545,
+      "url": "{{ _.URLBASE }}/api/games/?filters[slug][$eq]=hogwarts-legacy",
+      "name": "GelGameBySlug",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1682381463395.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eb9f934cb643472194995cd3f461dd33",
+      "parentId": "fld_5ea75d1243424beb9bad7ad9924f8064",
+      "modified": 1682381305545,
+      "created": 1682381201801,
+      "url": "{{ _.URLBASE }}/api/plataforms?populate=images",
+      "name": "GetAll",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1682381201801,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5ea75d1243424beb9bad7ad9924f8064",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682381167234,
+      "created": 1682381167234,
+      "name": "Plataforma",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682381167234,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1d97703ff821452d92fa0e8b472b9261",
+      "parentId": "fld_5ea75d1243424beb9bad7ad9924f8064",
+      "modified": 1682381444280,
+      "created": 1682381396507,
+      "url": "{{ _.URLBASE }}/api/plataforms?filters[slug][$eq]=pc",
+      "name": "GetBySlug",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1682246178309.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9a91b63d08364f538574d937bdba8fbd",
+      "parentId": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "modified": 1682111468528,
+      "created": 1682111149849,
+      "url": "{{ _.URLBASE }}/api/addresses",
+      "name": "CreateAddress",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"data\":{\n\t\t\"title\":\"titleaaaaaaaaaaa\",\n\t\t\"name\":\"name\",\n\t\t\"address\":\"rua\",\n\t\t\"city\":\"Maua\",\n\t\t\"state\":\"maua\",\n\t\t\"postal_code\":\"1234\",\n\t\t\"user\":2\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682111154818.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682112406828,
+      "created": 1682111159788,
+      "name": "Address",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682111159788,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2ad0ca2cdf684793861e1e5281bf138f",
+      "parentId": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "modified": 1682112389777,
+      "created": 1682111612975,
+      "url": "{{ _.URLBASE }}/api/addresses?filters[user]=2",
+      "name": "GetMyAddress",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}",
+        "disabled": false
+      },
+      "metaSortKey": -1682111154815.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_36a8e5938ac04bf19642d4e5f6640807",
+      "parentId": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "modified": 1682112390992,
+      "created": 1682111936536,
+      "url": "{{ _.URLBASE }}/api/addresses?populate=*",
+      "name": "GetAddress__Populate",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}",
+        "disabled": false
+      },
+      "metaSortKey": -1682111154813.8125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b1a20ebd03c648d882d7b0c1d0f02e07",
+      "parentId": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "modified": 1682112425301,
+      "created": 1682112256731,
+      "url": "{{ _.URLBASE }}/api/addresses/1",
+      "name": "UpdateAddress",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"data\":{\n\t\"title\":\"BATATA\",\n\t\"name\": \"bruno moraes\",\n\t\"address\": \"sem \",\n\t\"city\": \"cidade\",\n\t\"state\": \"estado\",\n\t\"postal_code\": \"0999119\",\n\t\"phone\": \"000\"\t\t\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682111154813.0312,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fc4bcc286f8f40299b22623c1b3b8bf0",
+      "parentId": "fld_a5a212b9e5a84eaabcc8651c8caef5a6",
+      "modified": 1682112384887,
+      "created": 1682112107118,
+      "url": "{{ _.URLBASE }}/api/addresses/2",
+      "name": "DeleteAddress",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682111154812.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_79940b22416849dc872bd1a45dcbabbd",
+      "parentId": "fld_b4a2467ae5354bcd91253ecca16317db",
+      "modified": 1682110103773,
+      "created": 1682109923817,
+      "url": "{{ _.URLBASE }}/api/auth/local/register",
+      "name": "Register",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"email22222@email.com\",\n\t\"username\":\"username22222\",\n\t\"password\":\"123456\"\t\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1682109923817,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b4a2467ae5354bcd91253ecca16317db",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682109952661,
+      "created": 1682109952661,
+      "name": "Auth",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682109952661,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e63a7f63e5254d82b22e56e1df43643e",
+      "parentId": "fld_b4a2467ae5354bcd91253ecca16317db",
+      "modified": 1682111407777,
+      "created": 1682110200136,
+      "url": "{{ _.URLBASE }}/api/auth/local",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"identifier\":\"username\",\n\t\"password\":\"123456\"\t\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1682109761247,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_06a5e0ab015a468f95be51b4732d695e",
+      "parentId": "fld_1fc0f9ca969543cb9dc0b30a714dc548",
+      "modified": 1682110696651,
+      "created": 1682110574540,
+      "url": "{{ _.URLBASE }}/api/users/2",
+      "name": "updateUser",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"firstname\": \"Bruno\",\n\t\"lastname\": \"Moraes\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_15bbaa7c53c74ff588bdad45f822471d",
+          "name": "",
+          "value": "",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.TOKEN_JWT }}"
+      },
+      "metaSortKey": -1682110574540,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1fc0f9ca969543cb9dc0b30a714dc548",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682110466056,
+      "created": 1682109814070,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1682109814070,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_6a2119e5a908494f8a48155a7cc26252",
+      "parentId": "fld_1fc0f9ca969543cb9dc0b30a714dc548",
+      "modified": 1682110389539,
+      "created": 1682109598677,
+      "url": "{{ _.URLBASE }}/api/users/me",
+      "name": "getMe",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_75fc5886ec834687a4e1e306903190c7",
+          "name": "Authorization",
+          "value": "Bearer {{ _.TOKEN_JWT }}",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "apikey",
+        "disabled": false,
+        "key": "",
+        "value": "",
+        "addTo": "header"
+      },
+      "metaSortKey": -1682109598677,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bc006cd69a5f4156af7dc6813f686d3b",
+      "parentId": "fld_1fc0f9ca969543cb9dc0b30a714dc548",
+      "modified": 1682110523762,
+      "created": 1682110498125,
+      "url": "{{ _.URLBASE }}/api/users",
+      "name": "listAllUser",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_75fc5886ec834687a4e1e306903190c7",
+          "name": "Authorization",
+          "value": "Bearer {{ _.TOKEN_JWT }}",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "apikey",
+        "disabled": false,
+        "key": "",
+        "value": "",
+        "addTo": "header"
+      },
+      "metaSortKey": -1681943760836,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_bde4e4188aaa7163fc6f3cf599001962c64cc97d",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682382887225,
+      "created": 1682109578599,
+      "name": "Base Environment",
+      "data": {
+        "URLBASE": "http://localhost:1337",
+        "TOKEN_JWT": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMzgyODc3LCJleHAiOjE2ODQ5NzQ4Nzd9.6UjwlH2B5rnrtqbtXctdFEh2A28D0zXnN01zuOWOF1s"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "URLBASE",
+          "TOKEN_JWT"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1682109578599,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_bde4e4188aaa7163fc6f3cf599001962c64cc97d",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682109578600,
+      "created": 1682109578600,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_bdea65e7dc684b48a7f921664fb0a087",
+      "parentId": "wrk_0f780c40742540019222ee8dd19e4931",
+      "modified": 1682109578595,
+      "created": 1682109578595,
+      "fileName": "strapi eccomerce",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
