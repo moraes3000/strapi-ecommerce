@@ -30,7 +30,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     });
 
     const charge = await stripe.charges.create({
-      amount: totalPayment * 100,
+      amount: Math.round(totalPayment * 100),
       currency: "eur",
       source: token.id,
       description: `UserId ${idUser}`,
