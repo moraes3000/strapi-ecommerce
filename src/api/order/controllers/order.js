@@ -44,7 +44,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       addressShipping,
     };
 
-    const model = strapi.contentType["api::order.order"];
+    const model = strapi.contentTypes["api::order.order"];
     const validData = await strapi.entityValidator.validateEntityCreation(
       model,
       data
