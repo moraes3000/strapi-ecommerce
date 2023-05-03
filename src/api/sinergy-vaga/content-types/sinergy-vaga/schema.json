@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sinergy_vagas",
+  "info": {
+    "singularName": "sinergy-vaga",
+    "pluralName": "sinergy-vagas",
+    "displayName": "SinergyVaga",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "local": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "salary": {
+      "type": "decimal"
+    },
+    "imgString": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "CLT",
+        "PJ"
+      ]
+    },
+    "LikeString": {
+      "type": "enumeration",
+      "enum": [
+        "TRUE",
+        "False"
+      ]
+    },
+    "like": {
+      "type": "boolean"
+    }
+  }
+}
